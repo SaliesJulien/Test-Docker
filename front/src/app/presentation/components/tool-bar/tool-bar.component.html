@@ -1,0 +1,34 @@
+<mat-toolbar color="primary">
+  <div class="toolbar-left-icons">
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with menu icon"
+    >
+      <mat-icon>attach_money</mat-icon>
+    </button>
+    <span>Count Of Money</span>
+  </div>
+  <div class="toolbar-right-icons-anonymous" *ngIf="!isLoggedIn">
+    <span class="example-spacer"></span>
+    <button mat-raised-button color="accent">Sign In</button>
+    <button mat-raised-button color="primary">Sign Up</button>
+  </div>
+  <div class="toolbar-right-icons" *ngIf="isLoggedIn">
+    <span class="example-spacer"></span>
+    <button
+      mat-icon-button
+      class="example-icon favorite-icon"
+      aria-label="Example icon-button with heart icon"
+    >
+      <mat-icon>notifications</mat-icon>
+    </button>
+    <button
+      mat-icon-button
+      class="example-icon"
+      aria-label="Example icon-button with share icon"
+    >
+      <mat-icon>account_circle</mat-icon>
+    </button>
+  </div>
+</mat-toolbar>
